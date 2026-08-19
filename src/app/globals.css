@@ -1,0 +1,193 @@
+@import 'tailwindcss';
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+    --font-heading: var(--font-space-grotesk), var(--font-outfit), sans-serif;
+    --font-display: var(--font-space-grotesk), var(--font-outfit), sans-serif;
+    --color-villela-cta: var(--villela-cta);
+    --color-villela-teal: var(--villela-teal);
+    --color-villela-teal-escuro: var(--villela-teal-escuro);
+    --color-villela-logo: var(--villela-logo);
+    --color-villela-navy: var(--villela-navy);
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar: var(--sidebar);
+    --color-chart-5: var(--chart-5);
+    --color-chart-4: var(--chart-4);
+    --color-chart-3: var(--chart-3);
+    --color-chart-2: var(--chart-2);
+    --color-chart-1: var(--chart-1);
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent: var(--accent);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-muted: var(--muted);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary: var(--secondary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary: var(--primary);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-popover: var(--popover);
+    --color-card-foreground: var(--card-foreground);
+    --color-card: var(--card);
+    --color-foreground: var(--foreground);
+    --color-background: var(--background);
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2.2);
+    --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+/*
+ * Paleta Villela Group (grupovillela.com.br) — tema claro único.
+ * Ciano vibrante sobre off-white, tinta em azul-petróleo.
+ * Botões primários: texto petróleo escuro sobre ciano (como os CTAs do site da marca).
+ */
+:root {
+    --background: #f6f7f3;           /* off-white Villela */
+    --foreground: #0a323c;           /* petróleo */
+    --card: #ffffff;
+    --card-foreground: #0a323c;
+    --popover: #ffffff;
+    --popover-foreground: #0a323c;
+    --primary: #00bce5;              /* ciano primário da marca */
+    --primary-foreground: #052833;   /* tinta escura sobre ciano — contraste alto */
+    --secondary: #e3eef1;
+    --secondary-foreground: #0a323c;
+    --muted: #edf1ec;
+    --muted-foreground: #4a6572;
+    --accent: #d7f4fb;               /* ciano claro de fundo */
+    --accent-foreground: #081e2e;
+    --destructive: #dc2626;
+    --border: #dbe3e0;
+    --input: #dbe3e0;
+    --ring: #00bce5;
+    --chart-1: #00bce5;
+    --chart-2: #116780;
+    --chart-3: #3cb5c9;
+    --chart-4: #55c2e6;
+    --chart-5: #0a323c;
+    --radius: 0.625rem;
+    --sidebar: #ffffff;
+    --sidebar-foreground: #0a323c;
+    --sidebar-primary: #00bce5;
+    --sidebar-primary-foreground: #052833;
+    --sidebar-accent: #d7f4fb;
+    --sidebar-accent-foreground: #081e2e;
+    --sidebar-border: #dbe3e0;
+    --sidebar-ring: #00bce5;
+    /* extras da marca para uso pontual */
+    --villela-cta: #55c2e6;          /* fundo de botões CTA do site */
+    --villela-teal: #3cb5c9;         /* teal de apoio */
+    --villela-teal-escuro: #116780;  /* hover/ênfase */
+    --villela-logo: #18c1e8;         /* ciano exato do logo */
+    --villela-navy: #081e2e;         /* azul-marinho institucional */
+}
+
+/* Tema único claro na demo — .dark espelha o claro para evitar surpresas
+   se algum componente alternar a classe. */
+.dark {
+    --background: #f6f7f3;
+    --foreground: #0a323c;
+    --card: #ffffff;
+    --card-foreground: #0a323c;
+    --popover: #ffffff;
+    --popover-foreground: #0a323c;
+    --primary: #00bce5;
+    --primary-foreground: #052833;
+    --secondary: #e3eef1;
+    --secondary-foreground: #0a323c;
+    --muted: #edf1ec;
+    --muted-foreground: #4a6572;
+    --accent: #d7f4fb;
+    --accent-foreground: #081e2e;
+    --destructive: #dc2626;
+    --border: #dbe3e0;
+    --input: #dbe3e0;
+    --ring: #00bce5;
+    --chart-1: #00bce5;
+    --chart-2: #116780;
+    --chart-3: #3cb5c9;
+    --chart-4: #55c2e6;
+    --chart-5: #0a323c;
+    --sidebar: #ffffff;
+    --sidebar-foreground: #0a323c;
+    --sidebar-primary: #00bce5;
+    --sidebar-primary-foreground: #052833;
+    --sidebar-accent: #d7f4fb;
+    --sidebar-accent-foreground: #081e2e;
+    --sidebar-border: #dbe3e0;
+    --sidebar-ring: #00bce5;
+    --villela-cta: #55c2e6;
+    --villela-teal: #3cb5c9;
+    --villela-teal-escuro: #116780;
+    --villela-logo: #18c1e8;
+    --villela-navy: #081e2e;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
+  html {
+    @apply font-sans;
+    }
+}
+
+/* Costura de fluxo — linha viva entre as duas metades da tela de login. */
+@layer components {
+  .flow-seam {
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(0 188 229 / 0.5) 30%,
+      rgb(0 188 229 / 0.5) 70%,
+      transparent
+    );
+  }
+  .flow-seam::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -25%;
+    height: 22%;
+    width: 100%;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      #5bc8f5 45%,
+      #ffffff 50%,
+      #5bc8f5 55%,
+      transparent
+    );
+    animation: flow-desce 7s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  @keyframes flow-desce {
+    from { top: -25%; }
+    to { top: 103%; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .flow-seam::after {
+      animation: none;
+      opacity: 0;
+    }
+  }
+}
