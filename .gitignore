@@ -1,0 +1,27 @@
+node_modules/
+.next/
+out/
+build/
+.env
+.env.local
+.env*.local
+# segredos de produção vivem só na VPS (Supabase secret, Google, encryption key)
+.env.production
+next-env.d.ts
+*.tsbuildinfo
+coverage/
+supabase/.temp/
+
+# staging de assets brutos do cliente (a versao otimizada vai para public/)
+/videos/
+
+# chaves SSH / acesso a VPS (nunca versionar chaves privadas)
+/vps_villela/
+
+# local tooling / OS
+.mcp.json
+.claude/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

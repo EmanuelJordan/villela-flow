@@ -1,0 +1,20 @@
+services:
+  flow:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: villela-flow
+    container_name: villela_flow
+    restart: unless-stopped
+    env_file:
+      - .env.production
+    expose:
+      - "3005"
+    networks:
+      - agente
+
+networks:
+  # rede ja criada pelo stack do agente; Caddy vive nela e alcanca villela_flow por nome
+  agente:
+    external: true
+    name: villela-agente-atendente_default
