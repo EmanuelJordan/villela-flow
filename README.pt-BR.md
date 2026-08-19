@@ -10,8 +10,7 @@ PDF fecham o ciclo. Feito com Next.js 16 e Supabase.
 
 > **Sobre dados e credenciais.** Este é um repositório de portfólio de um projeto feito para um
 > cliente (Grupo Villela). Pessoas, empresas e identificadores de relatório reais nos fixtures
-> foram trocados por valores fictícios; todo segredo vive apenas no `.env.local` (nunca versionado
-> — veja [`.env.example`](./.env.example)); runbooks internos e atas foram removidos. Nenhum dado
+> foram trocados por valores fictícios; todo segredo vive apenas no `.env.local` (nunca versionado); runbooks internos e atas foram removidos. Nenhum dado
 > pessoal real ou credencial está presente neste repositório ou no seu histórico.
 
 ---
@@ -55,7 +54,7 @@ shadcn/ui · Supabase (Auth + Postgres + RLS) · Google Calendar/Meet API · zod
 
 ```bash
 npm install
-cp .env.example .env.local        # preencha os valores abaixo
+# create .env.local — preencha os valores abaixo
 npx supabase link                 # vincule seu projeto Supabase
 npx supabase db push              # aplica as migrations (supabase/migrations)
 npm run seed -- --reset           # dados demo fictícios (faker, com seed fixa)
@@ -64,7 +63,7 @@ npm run dev                       # http://localhost:3005
 
 ### Variáveis de ambiente
 
-Todas documentadas em [`.env.example`](./.env.example):
+As variáveis:
 
 | Variável | Para quê |
 |---|---|

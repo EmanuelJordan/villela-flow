@@ -11,7 +11,7 @@ Built with Next.js 16 and Supabase.
 > **Note on data & credentials.** This is a portfolio copy of a project built for a client
 > (Grupo Villela). Real people, companies and diagnostic-report identifiers in the fixtures
 > have been replaced with fictional values; every secret lives only in `.env.local` (never
-> committed — see [`.env.example`](./.env.example)); internal runbooks and meeting notes were
+> committed); internal runbooks and meeting notes were
 > removed. No real personal data or credentials are present in this repository or its history.
 
 ---
@@ -56,7 +56,7 @@ shadcn/ui · Supabase (Auth + Postgres + RLS) · Google Calendar/Meet API · zod
 
 ```bash
 npm install
-cp .env.example .env.local        # fill the values below
+# create .env.local — fill the values below
 npx supabase link                 # link your Supabase project
 npx supabase db push              # apply migrations (supabase/migrations)
 npm run seed -- --reset           # fictional demo data (faker, seeded)
@@ -65,7 +65,7 @@ npm run dev                       # http://localhost:3005
 
 ### Environment
 
-Every variable is documented in [`.env.example`](./.env.example):
+The variables:
 
 | Variable | Purpose |
 |---|---|
